@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Estudo Vue</title>
+</head>
+<body>
+
+<div id="app">
+	<h1>Dados pessoais</h1><br>
+	<span v-for="pessoa in pessoas">
+		<hr>
+		<strong>Nome:</strong> {{ pessoa.nome }} <br>
+		<strong>Sobrenome:</strong> {{ pessoa.sobrenome }} <br>
+		<strong>Idade:</strong> {{ pessoa.idade }} <br>
+		<strong>Profissão:</strong> {{ pessoa.profissao }} <br>
+		<h3>Carreira:</h3><br>
+		<span v-for="empresa in pessoa.empresas">
+			<strong>Razao Social:</strong> {{ empresa.razaoSocial }} <br>
+		</span>
+			
+	</span>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script type="text/javascript">
+	new Vue({
+		el: "#app",
+		data:{
+			pessoas:[{
+				nome: "Alcides",
+				sobrenome: "Junior",
+				idade: 24,
+				profissao: "Programador",
+				empresas: [
+					{razaoSocial: "Macavi"},
+					{razaoSocial: "IFCE"},
+					{razaoSocial: "Setydeias"}
+				]
+			},
+			{
+				nome: "Antonio",
+				sobrenome: "José",
+				idade: 42,
+				profissao: "Analista Senior",
+				empresas: [{razaoSocial: "IFCE"}]
+			}
+			]
+		}
+	})
+</script>
+
+</body>
+</html>

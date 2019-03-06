@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Diretivas</title>
+	<style type="text/css">
+		.red{
+			color: red;
+		}
+	</style>
+</head>
+<body>
+<span id="app2" v-cloak>
+	<h1>v-text</h1>
+	<i v-text="titulo"></i><br>
+	{{mensagem}}
+	<hr>
+	<h1>v-html</h1>
+	<i v-html="titulo"></i>
+	<hr>
+	<h1>v-show</h1>
+	<b style="border-style: solid;border-color: red" v-show="erro">Aparece apenas se a variável erro estiver como true</b>
+	<hr>
+	<h1>v-if e v-else</h1>
+	<span v-if="nome == 'Alcides'" :class="classe">O nome é Alcides</span>
+	<span v-else>O nome não é Alcides</span>
+	<hr>
+	<h1>v-for</h1>
+	<span v-for="item in items" v-bind:key="item.id">
+		<span>{{item.id}}</span>
+		<b>{{item.nome}}</b><br>
+	</span>
+	<hr>
+	<h1>v-bind:src</h1>
+	<span v-for="imagem in imagens">
+		<img :src="imagem.path" :width="imagem.width" :height="imagem.height">
+	</span>
+	<hr>
+	<h1>v-on:click ou @click</h1>
+	<button @click="clicou()">Click-me!</button>
+	<span v-if="msg_clicou!=null">{{msg_clicou}}</span>
+	<span v-else>Voce ainda não clicou!</span>
+</span>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script type="text/javascript" src="index.js"></script>
+
+</body>
+</html>

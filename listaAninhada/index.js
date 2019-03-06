@@ -1,6 +1,7 @@
 new Vue({
 		el: "#app",
 		data:{
+			teste:"testado",
 			pessoas:[{
 				nome: "Alcides",
 				sobrenome: "Junior",

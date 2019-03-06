@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Components VueJS</title>
+</head>
+<body >
+<div id="app">
+	<menu-principal></menu-principal>
+	<contato></contato>
+	<hr>
+	<contato></contato>
+</div>
+<template id="paises">
+		<span>
+		Brazil<br>
+		EUA<br>
+		China
+		<button>TalKey</button>
+	</span>
+</template>
+
+<template id="contato">
+	<form>
+		<label>
+			Nome:
+			<input type="text" name="">
+		</label>
+		<label>
+			Telefone:
+			<input type="phone" name="">
+		</label>
+		<label>
+			E-mail:
+			<input type="mail" name="">
+		</label>
+	</form>
+</template>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script type="text/javascript" src="index.js"></script>
+</body>
+</html>

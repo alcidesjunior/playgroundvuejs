@@ -6,6 +6,11 @@
 		.red{
 			color: red;
 		}
+		[v-cloak] > * {display: none;}
+		[v-cloak]::before{
+			content: "Carregando...";
+
+		}
 	</style>
 </head>
 <body>

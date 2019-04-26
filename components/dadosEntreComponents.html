@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dados entre components</title>
+</head>
+<body>
+
+<div id="app">
+	<component1></component1>
+</div>
+
+
+<template id="comp1">
+	
+	<span><h1>nova lista com dados compartilhados entre componentes</h1><br>
+		<component2 :items="dados"></component2>
+	</span>
+</template>
+<template id="comp2">
+	<ul>
+		<li v-for="item in items">{{item.nome}}</li>
+	</ul>
+</template>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script type="text/javascript" src="index.js"></script>
+</body>
+</html>
